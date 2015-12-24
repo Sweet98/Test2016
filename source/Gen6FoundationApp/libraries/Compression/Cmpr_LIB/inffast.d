@@ -1,9 +1,0 @@
-Cmpr_LIB/inffast.o: zlibut\inffast.c
-Cmpr_LIB/inffast.o: zlibut\zutil.h
-Cmpr_LIB/inffast.o: zlibut\zlib.h
-Cmpr_LIB/inffast.o: zlibut\zconf.h
-Cmpr_LIB/inffast.o: zlibut\inftrees.h
-Cmpr_LIB/inffast.o: zlibut\infblock.h
-Cmpr_LIB/inffast.o: zlibut\infcodes.h
-Cmpr_LIB/inffast.o: zlibut\infutil.h
-Cmpr_LIB/inffast.o: zlibut\inffast.h
