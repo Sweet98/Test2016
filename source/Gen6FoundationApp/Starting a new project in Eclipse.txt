@@ -1,0 +1,32 @@
+Starting a new project in Eclipse
+
+1. Make a new project sandbox.
+2. To open a project you need to do the following:
+	* Open Eclipse
+	* Open a Workspace pointing to your sandbox folder. (the contents of this folder contain the folders 		“Gen6FoundationApp” and “.metadata”
+	* Open a new Project
+		o From File menu
+		o New
+		o Project
+	* Select a General Project, click next
+	* Name the project “Gen6FoundationApp”
+	* Click Finish.
+
+Building a project:
+   You should see a list of all the files in the project located on the left menu.
+   You can build the project using a make file by:
+	* Right click the top project folder, (Gen6FoundationApp).
+	* Select “Build Make Target”
+	* Select the target you would like to build
+	* Click OK
+
+When you open a new workspace, eclipse will try to do a “build all” which is unsupported by our make file.  You can change the “build automatically” setting by:
+	* Open the window menu
+	* Select “preferences”
+	* Expand the general list located on the left of the dialog box
+	* Select the “workspace” function
+	* Under workspace you can uncheck the build “build automatically” box.
+
+Under the preferences menu you can also change “Save automatically before build” and show line numbers.  You will need to change these settings every time you open a new workspace.
+
+

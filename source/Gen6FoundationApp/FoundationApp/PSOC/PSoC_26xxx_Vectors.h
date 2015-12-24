@@ -1,0 +1,221 @@
+//======================================================================================
+//	Revision information
+//======================================================================================
+// $RCSfile: Gen6FoundationApp/FoundationApp/PSOC/PSoC_26xxx_Vectors.h $
+// $Revision: 1.2 $
+// $Date: 2010/07/12 23:47:49EDT $
+
+/// GENERAL DESCRIPTION
+//**************************************************************************************
+//
+
+
+#ifndef PSoC_26xxx_Vector_Table
+#define PSoC_26xxx_Vector_Table
+//struct
+//{
+const unsigned int Initialize1_26x[] =
+{
+	0x650000,
+	0x000000,
+	0x000000,
+	0x47B200,
+	0x6F7000,
+	0x6F6080,
+	0x4F83A0,
+	0x4F90B0,
+	0x6F5000,
+	0x6F4030,
+	0x4FB200,
+	0x6F9300,
+	0x6FA400,
+	0x6F0080,
+	0x6F8000,
+	0x6FF120,
+	1
+};
+
+const unsigned int Initialize2_26x[] =
+{
+	0x6F7000,
+	0x6F6080,
+	0x4F83A0,
+	0x4F90B0,
+	0x6F5000,
+	0x6F4030,
+	0x4FB200,
+	0x6F9300,
+	0x6FA400,
+	0x4FA010,
+	0x6F0060,
+	0x6F8000,
+	0x6FF120,
+	1
+};
+
+const unsigned int Initialize3_26x[] =	// For operation with Vcc <= 3.6
+{
+	0x6F7000,
+	0x6F4030,
+	0x6F5000,
+	0x6F6080,
+	0x6F8510,
+	0x6F9F80,
+	0x6FA300,
+	0x6FF120,
+	0x000000,
+	0x6F7000,
+	0x6F4030,
+	0x6F5000,
+	0x6F6080,
+	0x6F8600,
+	0x6F9EA0,
+	0x6FA300,
+	0x6F7100,
+	0x6FF120,
+	0x000000,
+	1
+};
+
+const unsigned int IdSetup_26x[] =
+{
+	0x6F7000,
+	0x6F6080,
+	0x4F83A0,
+	0x4F90B0,
+	0x6F5000,
+	0x6F4030,
+	0x4FB200,
+	0x6F9300,
+	0x6FA400,
+	0x4FA000,
+	0x6F0060,
+	0x6F8000,
+	0x6FF120,
+	1
+};
+
+const unsigned int EraseAll_26x[] =
+{
+	0x6f7000,
+	0x6f6400,
+	0x4f83A0,
+	0x4f9430,
+	0x6f5000,
+	0x6f4030,
+	0x4fB800,
+	0x6f9300,
+	0x6fA400,
+	0x6f0050,
+	0x6f8000,
+	0x6fF120,
+	1
+};
+
+const unsigned int ProgramBlock_26x[] =
+{
+	0x6f7000,
+	0x6f6080,
+	0x4f83A0,
+	0x4f90B0,
+	0x6f5000,
+	0x6f4030,
+	0x4fB200,
+	0x6f9300,
+	0x6fA400,
+	0x6f0020,
+	0x6f8000,
+	0x6fF120,
+	1
+};
+
+const unsigned int VerifySetup_26x[] =
+{
+	0x6f7000,
+	0x6f6080,
+	0x4f83A0,
+	0x4f90B0,
+	0x6f5000,
+	0x6f4030,
+	0x4fB200,
+	0x6f9300,
+	0x6fA400,
+	0x6f0010,
+	0x6f8000,
+	0x6fF120,
+	1
+};
+
+const unsigned int SecureBlock_26x[] =
+{
+	0x6f7000,
+	0x6f6400,
+	0x4f83A0,
+	0x4f9430,
+	0x6f5000,
+	0x6f4030,
+	0x4fB800,
+	0x6f9300,
+	0x6fA400,
+	0x6f0040,
+	0x6f8000,
+	0x6fF120,
+	1
+};
+
+const unsigned int ChecksumSetup_26x[] =
+{
+	0x6f7000,
+	0x6f6080,
+	0x4f83A0,
+	0x4f90B0,
+	0x6f5000,
+	0x6f4030,
+	0x4fB200,
+	0x6f9300,
+	0x6fA400,
+#ifdef DEVELOPMENT_BOARD
+	0x4fA000,
+#else		// Form factor board
+	0x4fA800,
+#endif
+	0x6f0070,
+	0x6f8000,
+	0x6fF120,
+	1
+};
+const unsigned int ChecksumSetup_26443[] =
+{
+	0x6f7000,
+	0x6f6080,
+	0x4f83A0,
+	0x4f90B0,
+	0x6f5000,
+	0x6f4030,
+	0x4fB200,
+	0x6f9300,
+	0x6fA400,
+	0x4fA000,
+	0x6f0070,
+	0x6f8000,
+	0x6fF120,
+	1
+};
+
+const unsigned int ReadID_26x[] =
+{
+	0x05F8,
+	0x05F9,
+	1
+};
+
+const unsigned int ReadChecksum_26x[] =
+{
+	0x05F9,
+	0x05F8,
+	1
+};
+
+
+
+#endif

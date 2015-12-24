@@ -1,0 +1,36 @@
+TRIGGER EVT CHECKLIST
+
+
+Document:		NG2D Trigger EVT.doc
+Version:		1.0
+Status:			Draft
+Creation Date:		March 7, 2010
+Last Updated:		March 7, 2010
+
+1 Introduction
+This EVT checklist is for NPD engineering validation of the trigger function.
+2 Requirement Checklist
+
+Pass	Test to Perform
+
+O	Verify image in each trigger mode
+O	Verify switching between all available trigger modes
+O	Image ship while trigger modes triggered
+O	Image snap and ship while trigger modes triggered
+O	Test multiple snap and ships
+O	Vary ambient light to change exposure
+O	Set SDRDBG to 1 to catch possible DMA failures
+O	Illumination start up on new trigger pull: no delays or hiccups seen
+O	Shotgun Mode
+O	Sequence Mode
+O	Preferred Mode
+O	SCNLED0 – in retail presentation mode – make sure you can scan in office lighting with and without pulling the trigger
+O	Verify HH and SP plug-n plays work with both temporary manual trigger and the magnetic stand switch
+O	Set EMIRRD1, trgsto500, sdrtim0,  then change to sdrtim1
+O	Verify no flicker occurs on power-up
+O	Check host notify
+
+
+
+ACS Software Design Document
+IMAGING AND MOBILITY                         

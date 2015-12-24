@@ -1,0 +1,3 @@
+Output_APP_imx25_ID_FF3_3110/DescriptorQueues.o: D:\Super2D\source\Gen6FoundationApp\libraries\shared_matrix_interfaces\interfaces_usb2\base_usb2\DescriptorQueues.cpp
+Output_APP_imx25_ID_FF3_3110/DescriptorQueues.o: D:\Super2D\source\Gen6FoundationApp\libraries\shared_matrix_interfaces\interfaces_usb2\base_usb2\DescriptorQueues.h
+Output_APP_imx25_ID_FF3_3110/DescriptorQueues.o: D:\Super2D\source\Gen6FoundationApp/libraries/stringanddata/DataArray.h

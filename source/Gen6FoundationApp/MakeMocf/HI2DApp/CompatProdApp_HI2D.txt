@@ -1,0 +1,32 @@
+/*===================================================================
+  This is the Compatible Products Record data for Corded Application
+  Firmware.
+  0xE0:  Voyager 2D 1400 Boot Firmware
+  0xE1:  Voyager 2D 1400 Application Firmware
+  
+  Note:  the end of this multiline comment must be on its own
+  line.
+=====================================================================
+   $Source: Gen6FoundationApp/MakeMocf/HI2DApp/CompatProdApp_HI2D.txt $
+   $Date: 2011/11/13 07:37:25EST $
+   $Revision: 1.1 $
+
+===================================================================*/
+0xE0
+0xE1
+
+
+/*===================================================================
+                       File Modification History
+=====================================================================
+ $Log: Gen6FoundationApp/MakeMocf/HI2DApp/CompatProdApp_HI2D.txt  $
+ Revision 1.1 2011/11/13 07:37:25EST He,Ken (E532718) 
+ Initial revision
+ Member added to project d:/MKS_IT/Gen6FoundationApp/Gen6FoundationApp.pj
+ Revision 1.1 2011/08/03 16:23:49CST Chen,Steven (E488377) 
+ Initial revision
+ Member added to project d:/MKS_IT/Gen6FoundationApp/Gen6FoundationApp.pj
+ Revision 1.1 2010/02/25 04:55:38CST Rosetti,James (E412202) 
+ Initial revision
+ Member added to project d:/MKS_IT/Gen6FoundationApp/Gen6FoundationApp.pj
+===================================================================*/

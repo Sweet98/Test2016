@@ -1,0 +1,23 @@
+﻿How to build project
+====================
+
+Build APP in command line
+-----------------------------
+1. Open window console, go to directory .\source\Gen6FoundationApp
+2. Run command, Release_Builds_Corded.bat [product name] [build option]
+	[product name]: 8100 | 5100 | 4100 | 3100 | 3110 | 8213 ...
+	[build option]: beta (build test version) | clean (clean the project) |  (empty, build release version)
+
+**Example:**
+- Build 8100 test version
+	Example: Release_Builds_Corded.bat 8100 beta
+
+- Clean build output
+	Example: Release_Builds_Corded.bat 8100 clean
+
+- Build 8100 release version
+	Example: Release_Builds_Corded.bat 8100
+
+Build Boot in command line
+-----------------------------
+...

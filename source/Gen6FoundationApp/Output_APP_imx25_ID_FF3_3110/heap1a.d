@@ -1,0 +1,10 @@
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp\libraries\OsKernel\app_kernel\heap1a.c
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp\libraries\OsKernel\app_kernel\heap1a.h
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp\libraries\OsKernel\app_kernel\heap1.h
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp\libraries\OsKernel\app_kernel\thread.h
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp\libraries\OsKernel\app_kernel\interrupts.h
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/HardwareMacros.h
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/interruptMacros.h
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/iMX25/iMX25_INTVEC.h
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/iMX25/iMX25_ASIC.h
+Output_APP_imx25_ID_FF3_3110/heap1a.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/Hardware_Width_Defines.h

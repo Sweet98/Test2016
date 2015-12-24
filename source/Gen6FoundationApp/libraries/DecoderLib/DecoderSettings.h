@@ -1,0 +1,352 @@
+//======================================================================================
+// DecoderSettings.h
+//======================================================================================
+// $Source: DecoderSettings.h $
+// $Revision: 1.15 $
+// $Date: 2011/09/02 00:16:40EDT $
+//======================================================================================
+
+//======================================================================================
+
+
+
+ 
+//---------------------------------------------------------------------------
+//
+//  Module Interface Description:
+//      This file contains the settings / properties for the generic decoder 
+//
+//---------------------------------------------------------------------------
+
+
+
+#ifndef DECODER_SETTINGS_H
+#define DECODER_SETTINGS_H
+
+/* Preamble */
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus */
+
+
+/* Decoder Menu Types 
+ *	These are the expected type for each command. They are embedded in the menu tag so 
+ *	the user knows what type of information to pass into the menu function
+ */
+#define MENU_TYPE_INT		0x10000000 //single integer
+#define MENU_TYPE_CHAR		0x20000000 //single ASCII char
+#define MENU_TYPE_ARRAY		0x80000000 //used in conjunction with INT or CHAR
+#define MENU_TYPE_MASK		0xF0000000 //mask that can be used by software to determine types.
+
+
+/* System Control Settings
+ *	These settings are general decoder control. 
+ */
+ 
+// Basic
+#define DEC_DECODE_VIGOR						(MENU_TYPE_INT + 0x0A001001)
+#define DEC_IQ_FILTER_MODE						(MENU_TYPE_INT + 0x0A001002) //need to pull inside decoder, also need to check Rapid energy
+#define DEC_VIDEO_REVERSE_ENABLED				(MENU_TYPE_INT + 0x0A001004)
+#define DEC_SHOW_NO_READ_ENABLED				(MENU_TYPE_INT + 0x0A001005) //still done in system
+#define DEC_SHOW_DECODE_DEBUG					(MENU_TYPE_INT + 0x0A001006) //need to find functionality and port (if possible)
+#define DEC_COMBINE_COMPOSITES					(MENU_TYPE_INT + 0x0A001007)
+#define DEC_IMAGE_HEIGHT						(MENU_TYPE_INT + 0x0A001008)
+#define DEC_IMAGE_WIDTH							(MENU_TYPE_INT + 0x0A001009)
+#define DEC_IMAGE_LINE_DELTA					(MENU_TYPE_INT + 0x0A00100A) //wrap
+#define DEC_WINDOW_MODE							(MENU_TYPE_INT + 0x0A00100B)
+#define DEC_WINDOW_TOP							(MENU_TYPE_INT + 0x0A00100C)
+#define DEC_WINDOW_BOTTOM						(MENU_TYPE_INT + 0x0A00100D)
+#define DEC_WINDOW_LEFT							(MENU_TYPE_INT + 0x0A00100E)
+#define DEC_WINDOW_RIGHT						(MENU_TYPE_INT + 0x0A00100F)
+#define DEC_SHOW_DECODE_WINDOW					(MENU_TYPE_INT + 0x0A001010)
+#define DEC_IMAGE_CENTER_X						(MENU_TYPE_INT + 0x0A001011)
+#define DEC_IMAGE_CENTER_Y						(MENU_TYPE_INT + 0x0A001012)
+#define DEC_GET_ENERGY							(MENU_TYPE_INT + 0x0A001013)
+#define DEC_IMAGE_MIRRORED						(MENU_TYPE_INT + 0x0A001014)
+#define DEC_IMAGE_ROTATION						(MENU_TYPE_INT + 0x0A001015)
+
+#define DEC_USE_MLD								(MENU_TYPE_INT + 0x0A002001) //Check with tim to make sure this works
+#define DEC_SECURITY_LEVEL						(MENU_TYPE_INT + 0x0A002002) 
+#define DEC_ECI_HANDLING						(MENU_TYPE_INT + 0x0A002003)
+
+// Timing
+#define DEC_DECODE_TIMING_CONTROL				(MENU_TYPE_INT + 0x0A003001) //Don't think this doesn anything with ID
+#define DEC_DECODE_TIME							(MENU_TYPE_INT + 0x0A003002) //For now, not handled inside
+#define DEC_SEARCH_TIME							(MENU_TYPE_INT + 0x0A003003) //For now, not handled inside
+#define DEC_ADD_SEARCH_TIME_ADDENDA				(MENU_TYPE_INT + 0x0A003004) 
+#define DEC_ADD_SEARCH_TIME_CONCAT				(MENU_TYPE_INT + 0x0A003005) 
+#define DEC_ADD_SEARCH_TIME_UPC_COMPOSITE		(MENU_TYPE_INT + 0x0A003006) //VERIFY: timing is in there, need to check what Swift does with UPC composite
+
+// Customer Specific - special code build for adaptus, not sure for swift
+//#define DEC_DEPT_OF_AGG_CHINA_MODE				(MENU_TYPE_INT + 0x0A004001)
+
+//Misc Commands
+#define DEC_PRINT_RESULTS						(MENU_TYPE_INT + 0x0A005001) 
+#define DEC_DUMP_SETTINGS						(MENU_TYPE_INT + 0x0A005002) //not implemented
+#define DEC_DISPLAY_DATA						(MENU_TYPE_INT + 0x0A005003) //possibly remove, depends on how dump settings is implemented
+#define DEC_RESET_DECODER						(MENU_TYPE_INT + 0x0A005004) //Hooked to local menu settings at the moment, need to define if this is that or if we need this at all
+#define DEC_FAST_DECODER_ENABLED				(MENU_TYPE_INT + 0x0A005005) 
+#define DEC_FULL_DECODER_ENABLED				(MENU_TYPE_INT + 0x0A005006) 
+#define DEC_DISABLE_SYMBOLOGY_GROUP				(MENU_TYPE_INT + 0x0A005007) //values defined in "Group Disable Codes"
+
+//UPC-Misc
+#define DEC_COUPON_CODE_MODE					(MENU_TYPE_INT + 0x0A006001) 
+#define DEC_EANUCC_EMULATION_MODE				(MENU_TYPE_INT + 0x0A006002) 
+#define DEC_COUPON_SECONDARY_OUTPUT				(MENU_TYPE_INT + 0x0A006003) 
+
+//Color / Misc
+#define DEC_MONOCOLOR_ENABLED					(MENU_TYPE_INT + 0x0A007001) // enable appreciation / interpolation for monocolor image
+#define DEC_MONOCOLOR_OFFSET_X					(MENU_TYPE_INT + 0x0A007002) 
+#define DEC_MONOCOLOR_OFFSET_Y					(MENU_TYPE_INT + 0x0A007003) 
+#define DEC_MONOCOLOR_SPACING_X					(MENU_TYPE_INT + 0x0A007004) 
+#define DEC_MONOCOLOR_SPACING_Y					(MENU_TYPE_INT + 0x0A007005) 
+
+/* Symbology Specific Settings
+ *	These settings are specific for each symbology.
+ */
+
+/* Linear Symbologies */
+
+//UPC-A
+#define DEC_UPCA_ENABLED						(MENU_TYPE_INT + 0x0A010001) 
+#define DEC_UPCA_CHECK_DIGIT_TRANSMIT			(MENU_TYPE_INT + 0x0A010002) 
+#define DEC_UPCA_NUMBER_SYSTEM_TRANSMIT			(MENU_TYPE_INT + 0x0A010003) 
+#define DEC_UPCA_2CHAR_ADDENDA_ENABLED			(MENU_TYPE_INT + 0x0A010004) 
+#define DEC_UPCA_5CHAR_ADDENDA_ENABLED			(MENU_TYPE_INT + 0x0A010005) 
+#define DEC_UPCA_ADDENDA_REQUIRED				(MENU_TYPE_INT + 0x0A010006) 
+#define DEC_UPCA_ADDENDA_SEPARATOR				(MENU_TYPE_INT + 0x0A010007) 
+
+//UPC-E
+#define DEC_UPCE0_ENABLED						(MENU_TYPE_INT + 0x0A011001) 
+#define DEC_UPCE1_ENABLED						(MENU_TYPE_INT + 0x0A011002) 
+#define DEC_UPCE_EXPAND							(MENU_TYPE_INT + 0x0A011003) 
+#define DEC_UPCE_CHECK_DIGIT_TRANSMIT			(MENU_TYPE_INT + 0x0A011004) 
+#define DEC_UPCE_NUMBER_SYSTEM_TRANSMIT			(MENU_TYPE_INT + 0x0A011005) 
+#define DEC_UPCE_2CHAR_ADDENDA_ENABLED			(MENU_TYPE_INT + 0x0A011006) 
+#define DEC_UPCE_5CHAR_ADDENDA_ENABLED			(MENU_TYPE_INT + 0x0A011007) 
+#define DEC_UPCE_ADDENDA_REQUIRED				(MENU_TYPE_INT + 0x0A011008) 
+#define DEC_UPCE_ADDENDA_SEPARATOR				(MENU_TYPE_INT + 0x0A011009) 
+
+//EAN-8
+#define DEC_EAN8_ENABLED						(MENU_TYPE_INT + 0x0A012001) 
+#define DEC_EAN8_CHECK_DIGIT_TRANSMIT			(MENU_TYPE_INT + 0x0A012002) 
+#define DEC_EAN8_2CHAR_ADDENDA_ENABLED			(MENU_TYPE_INT + 0x0A012003) 
+#define DEC_EAN8_5CHAR_ADDENDA_ENABLED			(MENU_TYPE_INT + 0x0A012004) 
+#define DEC_EAN8_ADDENDA_REQUIRED				(MENU_TYPE_INT + 0x0A012005) 
+#define DEC_EAN8_ADDENDA_SEPARATOR				(MENU_TYPE_INT + 0x0A012006) 
+
+//EAN-13
+#define DEC_EAN13_ENABLED						(MENU_TYPE_INT + 0x0A013001) 
+#define DEC_EAN13_CHECK_DIGIT_TRANSMIT			(MENU_TYPE_INT + 0x0A013002) 
+#define DEC_EAN13_2CHAR_ADDENDA_ENABLED			(MENU_TYPE_INT + 0x0A013003) 
+#define DEC_EAN13_5CHAR_ADDENDA_ENABLED			(MENU_TYPE_INT + 0x0A013004) 
+#define DEC_EAN13_ADDENDA_REQUIRED				(MENU_TYPE_INT + 0x0A013005) 
+#define DEC_EAN13_ADDENDA_SEPARATOR				(MENU_TYPE_INT + 0x0A013006) 
+#define DEC_EAN13_ISBN_ENABLED					(MENU_TYPE_INT + 0x0A013007) 
+
+//Code 128
+#define DEC_CODE128_ENABLED						(MENU_TYPE_INT + 0x0A014001) 
+#define DEC_CODE128_MIN_LENGTH					(MENU_TYPE_INT + 0x0A014002) 
+#define DEC_CODE128_MAX_LENGTH					(MENU_TYPE_INT + 0x0A014003) 
+#define DEC_CODE128_APPEND_ENABLED				(MENU_TYPE_INT + 0x0A014004) 
+
+//GS1-128
+#define DEC_GS1_128_ENABLED						(MENU_TYPE_INT + 0x0A015001) 
+#define DEC_GS1_128_MIN_LENGTH					(MENU_TYPE_INT + 0x0A015002) 
+#define DEC_GS1_128_MAX_LENGTH					(MENU_TYPE_INT + 0x0A015003) 
+
+//Code 128/GS1-128 Misc
+#define DEC_C128_ISBT_ENABLED					(MENU_TYPE_INT + 0x0A014005) 
+#define DEC_C128_FNC1_SUBSTITUTE				(MENU_TYPE_INT + 0x0A014006) //not yet implemented
+#define DEC_C128_FNC_TRANSMIT					(MENU_TYPE_INT + 0x0A014007) //not yet implemented
+
+//Code 39
+#define DEC_CODE39_ENABLED						(MENU_TYPE_INT + 0x0A016001) 
+#define DEC_CODE39_MIN_LENGTH					(MENU_TYPE_INT + 0x0A016002) 
+#define DEC_CODE39_MAX_LENGTH					(MENU_TYPE_INT + 0x0A016003) 
+#define DEC_CODE39_CHECK_DIGIT_MODE				(MENU_TYPE_INT + 0x0A016004) //VERIFY
+#define DEC_CODE39_APPEND_ENABLED				(MENU_TYPE_INT + 0x0A016005) 
+#define DEC_CODE39_FULL_ASCII_ENABLED			(MENU_TYPE_INT + 0x0A016006)
+#define DEC_CODE39_START_STOP_TRANSMIT			(MENU_TYPE_INT + 0x0A016007)
+#define DEC_CODE39_BASE32_ENABLED				(MENU_TYPE_INT + 0x0A016008)
+
+//TLC 39
+#define DEC_TLC39_ENABLED						(MENU_TYPE_INT + 0x0A017001) 
+
+//Trioptic
+#define DEC_TRIOPTIC_ENABLED					(MENU_TYPE_INT + 0x0A018001) 
+
+//Interleaved 2 of 5
+#define DEC_I25_ENABLED							(MENU_TYPE_INT + 0x0A019001) 
+#define DEC_I25_MIN_LENGTH						(MENU_TYPE_INT + 0x0A019002) 
+#define DEC_I25_MAX_LENGTH						(MENU_TYPE_INT + 0x0A019003) 
+#define DEC_I25_CHECK_DIGIT_MODE				(MENU_TYPE_INT + 0x0A019004) 
+
+//Standard 2 of 5 (3 bar) - Industrial 2 of 5
+#define DEC_S25_ENABLED							(MENU_TYPE_INT + 0x0A01A001) 
+#define DEC_S25_MIN_LENGTH						(MENU_TYPE_INT + 0x0A01A002) 
+#define DEC_S25_MAX_LENGTH						(MENU_TYPE_INT + 0x0A01A003) 
+
+//IATA 2 of 5 (2 bar) - Airline 2 of 5
+#define DEC_IATA25_ENABLED						(MENU_TYPE_INT + 0x0A01B001) 
+#define DEC_IATA25_MIN_LENGTH					(MENU_TYPE_INT + 0x0A01B002) 
+#define DEC_IATA25_MAX_LENGTH					(MENU_TYPE_INT + 0x0A01B003) 
+
+//Matrix 2 of 5
+#define DEC_M25_ENABLED							(MENU_TYPE_INT + 0x0A01C001) 
+#define DEC_M25_MIN_LENGTH						(MENU_TYPE_INT + 0x0A01C002) 
+#define DEC_M25_MAX_LENGTH						(MENU_TYPE_INT + 0x0A01C003) 
+#define DEC_M25_CHECK_DIGIT_MODE				(MENU_TYPE_INT + 0x0A01C004) 
+
+//NEC 2 of 5
+#define DEC_NEC25_ENABLED						(MENU_TYPE_INT + 0x0A02F001)
+#define DEC_NEC25_MIN_LENGTH					(MENU_TYPE_INT + 0x0A02F002)
+#define DEC_NEC25_MAX_LENGTH					(MENU_TYPE_INT + 0x0A02F003)
+#define DEC_NEC25_CHECK_DIGIT_MODE				(MENU_TYPE_INT + 0x0A02F004)
+
+//Code 93
+#define DEC_CODE93_ENABLED						(MENU_TYPE_INT + 0x0A01D001) 
+#define DEC_CODE93_MIN_LENGTH					(MENU_TYPE_INT + 0x0A01D002) 
+#define DEC_CODE93_MAX_LENGTH					(MENU_TYPE_INT + 0x0A01D003) 
+#define DEC_CODE93_APPEND_ENABLED				(MENU_TYPE_INT + 0x0A01D004)
+
+//Code 11
+#define DEC_CODE11_ENABLED						(MENU_TYPE_INT + 0x0A01E001) 
+#define DEC_CODE11_MIN_LENGTH					(MENU_TYPE_INT + 0x0A01E002) 
+#define DEC_CODE11_MAX_LENGTH					(MENU_TYPE_INT + 0x0A01E003) 
+#define DEC_CODE11_CHECK_DIGIT_MODE				(MENU_TYPE_INT + 0x0A01E004) 
+
+//Codabar
+#define DEC_CODABAR_ENABLED						(MENU_TYPE_INT + 0x0A01F001) 
+#define DEC_CODABAR_MIN_LENGTH					(MENU_TYPE_INT + 0x0A01F002) 
+#define DEC_CODABAR_MAX_LENGTH					(MENU_TYPE_INT + 0x0A01F003) 
+#define DEC_CODABAR_START_STOP_TRANSMIT			(MENU_TYPE_INT + 0x0A01F004) 
+#define DEC_CODABAR_CHECK_DIGIT_MODE			(MENU_TYPE_INT + 0x0A01F005) 
+#define DEC_CODABAR_CONCAT_ENABLED				(MENU_TYPE_INT + 0x0A01F007) 
+
+//Telepen
+#define DEC_TELEPEN_ENABLED						(MENU_TYPE_INT + 0x0A020001) 
+#define DEC_TELEPEN_MIN_LENGTH					(MENU_TYPE_INT + 0x0A020002) 
+#define DEC_TELEPEN_MAX_LENGTH					(MENU_TYPE_INT + 0x0A020003) 
+#define DEC_TELEPEN_OLD_STYLE					(MENU_TYPE_INT + 0x0A020004) 
+
+//MSI
+#define DEC_MSI_ENABLED							(MENU_TYPE_INT + 0x0A021001) 
+#define DEC_MSI_MIN_LENGTH						(MENU_TYPE_INT + 0x0A021002) 
+#define DEC_MSI_MAX_LENGTH						(MENU_TYPE_INT + 0x0A021003) 
+#define DEC_MSI_CHECK_DIGIT_MODE				(MENU_TYPE_INT + 0x0A021004) 
+
+//RSS (GS1)
+#define DEC_RSS_14_ENABLED						(MENU_TYPE_INT + 0x0A022001) 
+#define DEC_RSS_LIMITED_ENABLED					(MENU_TYPE_INT + 0x0A022002) 
+#define DEC_RSS_EXPANDED_ENABLED				(MENU_TYPE_INT + 0x0A022003) 
+#define DEC_RSS_EXPANDED_MIN_LENGTH				(MENU_TYPE_INT + 0x0A022004) 
+#define DEC_RSS_EXPANDED_MAX_LENGTH				(MENU_TYPE_INT + 0x0A022005) 
+
+
+/* Stacked Linear Symbologies */
+
+//Codablock A
+#define DEC_CODABLOCK_A_ENABLED					(MENU_TYPE_INT + 0x0A030001)
+#define DEC_CODABLOCK_A_MIN_LENGTH				(MENU_TYPE_INT + 0x0A030002)
+#define DEC_CODABLOCK_A_MAX_LENGTH				(MENU_TYPE_INT + 0x0A030003)
+//Codablock F
+#define DEC_CODABLOCK_F_ENABLED					(MENU_TYPE_INT + 0x0A023001) 
+#define DEC_CODABLOCK_F_MIN_LENGTH				(MENU_TYPE_INT + 0x0A023002) 
+#define DEC_CODABLOCK_F_MAX_LENGTH				(MENU_TYPE_INT + 0x0A023003) 
+
+//PDF417
+#define DEC_PDF417_ENABLED						(MENU_TYPE_INT + 0x0A024001) 
+#define DEC_PDF417_MIN_LENGTH					(MENU_TYPE_INT + 0x0A024002) 
+#define DEC_PDF417_MAX_LENGTH					(MENU_TYPE_INT + 0x0A024003) 
+#define DEC_PDF417_SHOW_GLI						(MENU_TYPE_INT + 0x0A024004) //Looked to be linked to ECI_HANLDING
+#define DEC_PDF417_MACRO_ENABLED				(MENU_TYPE_INT + 0x0A024005) //not yet implemented
+#define DEC_PDF417_SHOW_MACRO					(MENU_TYPE_INT + 0x0A024006) //REMOVE - related to system ECI and not used anymore
+
+//Micro PDF417
+#define DEC_MICROPDF_ENABLED					(MENU_TYPE_INT + 0x0A025001) 
+#define DEC_MICROPDF_MIN_LENGTH					(MENU_TYPE_INT + 0x0A025002) 
+#define DEC_MICROPDF_MAX_LENGTH					(MENU_TYPE_INT + 0x0A025003) 
+
+//Composite
+#define DEC_COMPOSITE_ENABLED					(MENU_TYPE_INT + 0x0A026001) 
+#define DEC_COMPOSITE_MIN_LENGTH				(MENU_TYPE_INT + 0x0A026002) 
+#define DEC_COMPOSITE_MAX_LENGTH				(MENU_TYPE_INT + 0x0A026003) 
+#define DEC_COMPOSITE_WITH_UPC_ENABLED			(MENU_TYPE_INT + 0x0A026004) //VERIFY in combo with the UPC COMP timing
+
+
+/* Matrix 2D Symbologies */
+
+//Aztec Code
+#define DEC_AZTEC_ENABLED						(MENU_TYPE_INT + 0x0A027001) 
+#define DEC_AZTEC_MIN_LENGTH					(MENU_TYPE_INT + 0x0A027002) 
+#define DEC_AZTEC_MAX_LENGTH					(MENU_TYPE_INT + 0x0A027003) 
+#define DEC_AZTEC_APPEND_ENABLED				(MENU_TYPE_INT + 0x0A027004) 
+#define DEC_AZTEC_APPEND_STRIP_INFO				(MENU_TYPE_INT + 0x0A027005)
+
+//Maxicode
+#define DEC_MAXICODE_ENABLED					(MENU_TYPE_INT + 0x0A028001) 
+#define DEC_MAXICODE_MIN_LENGTH					(MENU_TYPE_INT + 0x0A028002) 
+#define DEC_MAXICODE_MAX_LENGTH					(MENU_TYPE_INT + 0x0A028003) 
+
+//DataMatrix
+#define DEC_DATAMATRIX_ENABLED					(MENU_TYPE_INT + 0x0A029001) 
+#define DEC_DATAMATRIX_MIN_LENGTH				(MENU_TYPE_INT + 0x0A029002) 
+#define DEC_DATAMATRIX_MAX_LENGTH				(MENU_TYPE_INT + 0x0A029003) 
+//#define DEC_DATAMATRIX_APPEND_ENABLED			(MENU_TYPE_INT + 0x0A029004) 
+//#define DEC_DATAMATRIX_APPEND_STRIP_INFO		(MENU_TYPE_INT + 0x0A029005)
+
+//QR Code
+#define DEC_QR_ENABLED							(MENU_TYPE_INT + 0x0A02A001) 
+#define DEC_QR_MIN_LENGTH						(MENU_TYPE_INT + 0x0A02A002) 
+#define DEC_QR_MAX_LENGTH						(MENU_TYPE_INT + 0x0A02A003) 
+#define DEC_QR_APPEND_ENABLED					(MENU_TYPE_INT + 0x0A02A004)
+
+//HanXin
+#define DEC_HANXIN_ENABLED						(MENU_TYPE_INT + 0x0A02B001) 
+#define DEC_HANXIN_MIN_LENGTH					(MENU_TYPE_INT + 0x0A02B002) 
+#define DEC_HANXIN_MAX_LENGTH					(MENU_TYPE_INT + 0x0A02B003) 
+
+//OCR
+#define DEC_OCR_MODE							(MENU_TYPE_INT + 0x0A02D001)
+#define DEC_OCR_TEMPLATE						(MENU_TYPE_INT + MENU_TYPE_ARRAY + 0x0A02D002) //an array of ints
+
+//Hong Kong 2 of 5 - aka China Post
+#define DEC_HK25_ENABLED						(MENU_TYPE_INT + 0x0A02C001) 
+#define DEC_HK25_MIN_LENGTH						(MENU_TYPE_INT + 0x0A02C002) 
+#define DEC_HK25_MAX_LENGTH						(MENU_TYPE_INT + 0x0A02C003) 
+
+//Korean Post
+#define DEC_KOREA_POST_ENABLED					(MENU_TYPE_INT + 0x0A100001)
+#define DEC_KOREA_POST_MIN_LENGTH				(MENU_TYPE_INT + 0x0A100002)
+#define DEC_KOREA_POST_MAX_LENGTH				(MENU_TYPE_INT + 0x0A100003)
+#define DEC_KOREA_POST_CHECK_DIGIT_TRANSMIT		(MENU_TYPE_INT + 0x0A100004)
+#define DEC_KOREA_POST_REVERSE					(MENU_TYPE_INT + 0x0A100005)
+
+
+/* Postal Symbologies */
+//Enable for all 2D postal symbologies. 
+//Please see PostalOptions array for values for this tag
+#define DEC_POSTAL_ENABLED						(MENU_TYPE_INT + 0x0A110001)
+#define DEC_POSTAL_ENABLED_DIRECT				(MENU_TYPE_INT + 0x0A110002)
+
+//PostNet
+#define DEC_POSTNET_CHECK_DIGIT_TRANSMIT		(MENU_TYPE_INT + 0x0A120001)
+
+//Planet Code
+#define DEC_PLANETCODE_CHECK_DIGIT_TRANSMIT		(MENU_TYPE_INT + 0x0A130001)
+
+//Australian Post
+#define DEC_AUS_POST_INTERPRET_MODE				(MENU_TYPE_INT + 0x0A140001)
+#define DEC_AUS_POST_ZERO_FCC					(MENU_TYPE_INT + 0x0A140002)
+#define DEC_AUS_POST_BAR_OUTPUT_ENABLED			(MENU_TYPE_INT + 0x0A140003)
+
+#define DEC_CAN_POST_BAR_OUTPUT				    (MENU_TYPE_INT + 0x0A140004)
+//Royal Mail
+#define DEC_ROYAL_MAIL_FORMAT_CHECK_MIN_LENGTH	(MENU_TYPE_INT + 0x0A150001)
+
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
+#endif //DECODER_SETTINGS_H
+

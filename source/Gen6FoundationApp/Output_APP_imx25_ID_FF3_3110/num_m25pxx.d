@@ -1,0 +1,10 @@
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\num_m25pxx.c
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\num_m25pxx.h
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\../../../common/fsf.h
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\../../../common/udefs_s.h
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\../../../common/fwerr.h
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\../../../common/port_s.h
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\../../../common/fsm.h
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\../../../common/fsmf.h
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp\libraries\Safe_FFS\src\nor\phy\Numonyx_winbond\../../../common/defs.h
+Output_APP_imx25_ID_FF3_3110/num_m25pxx.o: D:\Super2D\source\Gen6FoundationApp/FoundationApp/Peripheral_Interfaces/mx25spi.h

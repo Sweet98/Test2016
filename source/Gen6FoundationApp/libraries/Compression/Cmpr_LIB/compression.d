@@ -1,0 +1,12 @@
+Cmpr_LIB/compression.o: compression.cpp
+Cmpr_LIB/compression.o: ../StringAndData/BitString.h
+Cmpr_LIB/compression.o: ../StringAndData/HString.h
+Cmpr_LIB/compression.o: Compression.h
+Cmpr_LIB/compression.o: HHPCompressionConfig.h
+Cmpr_LIB/compression.o: zlibut\Deflate.h
+Cmpr_LIB/compression.o: zlibut\zutil.h
+Cmpr_LIB/compression.o: zlibut\zlib.h
+Cmpr_LIB/compression.o: zlibut\zconf.h
+Cmpr_LIB/compression.o: JPEG\JPEGLib.h
+Cmpr_LIB/compression.o: JPEG\jconfig.h
+Cmpr_LIB/compression.o: JPEG\jmorecfg.h

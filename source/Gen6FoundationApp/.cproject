@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?>
+
+<cproject>
+<storageModule moduleId="org.eclipse.cdt.core.settings">
+<cconfiguration id="converted.config.1578871597">
+<storageModule moduleId="scannerConfiguration">
+<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile"/>
+<profile id="org.eclipse.cdt.make.core.GCCStandardMakePerProjectProfile">
+<buildOutputProvider>
+<openAction enabled="false" filePath=""/>
+<parser enabled="true"/>
+</buildOutputProvider>
+<scannerInfoProvider id="specsFile">
+<runAction arguments="-E -P -v -dD ${plugin_state_location}/${specs_file}" command="gcc" useDefault="true"/>
+<parser enabled="true"/>
+</scannerInfoProvider>
+</profile>
+</storageModule>
+
+
+<storageModule buildSystemId="org.eclipse.cdt.core.defaultConfigDataProvider" id="converted.config.1578871597" moduleId="org.eclipse.cdt.core.settings" name="convertedConfig">
+<externalSettings/>
+<extensions>
+<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+</extensions>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
+
+<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+<pathentry kind="src" path=""/>
+<pathentry kind="out" path=""/>
+<pathentry kind="con" path="org.eclipse.cdt.make.core.DISCOVERED_SCANNER_INFO"/>
+<pathentry include="../../tools/make Files/ARM/RVCT/Data/4.0/400/include/windows" kind="inc" path="" system="true"/>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+<buildTargets>
+<target name="BOOT_imx25_8100" path="Build Targets/Boot" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=BOOT -DBOOTTARGET=imx25_8100 -DAPPTARGET=imx25_build</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_BOOT_imx25_8100" path="Build Targets/Boot" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=BOOT -DBOOTTARGET=imx25_8100 -DAPPTARGET=imx25_build</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="BOOT_imx25_5100" path="Build Targets/Boot" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=BOOT -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_build</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_BOOT_imx25_5100" path="Build Targets/Boot" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=BOOT -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_build</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="APP_imx25_ID_RF_Scan_FF2" path="Build Targets/RF Scan" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_RF_Scan_FF2</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_APP_imx25_ID_RF_Scan_FF2" path="Build Targets/RF Scan" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_RF_Scan_FF2</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_LIB_imx25_RF_Scan_StoneStreet_Prototype_Build" path="Build Targets/RF Scan" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_RF_Scan_StoneStreet_Prototype</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="KW_APP_imx25_ID_RF_Scan_FF2" path="Build Targets/RF Scan" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../Klocwork/KW.bat</buildCommand>
+<buildArguments>imx25_ID_RF_Scan_FF2</buildArguments>
+<buildTarget>all</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="LIB_imx25_RF_Scan_StoneStreet_Prototype_Build" path="Build Targets/RF Scan" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_RF_Scan_StoneStreet_Prototype</buildArguments>
+<buildTarget>MATRIX_LIB_SS</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="APP_imx25_RF_Base_FF2" path="Build Targets/RF Base" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=mx25evalbd -DAPPTARGET=imx25_RF_Base_FF2</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_APP_imx25_RF_Base_FF2" path="Build Targets/RF Base" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=mx25evalbd -DAPPTARGET=imx25_RF_Base_FF2</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="KW_APP_imx25_RF_Base_FF2" path="Build Targets/RF Base" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../Klocwork/KW.bat</buildCommand>
+<buildArguments>imx25_RF_Base_FF2</buildArguments>
+<buildTarget>all</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Bld_imx25_ID_FF3_8100" path="Build Targets/Build from Distribution Package" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SAN_APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_FF3_8100</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Bld_imx25_ID_RF_Scan_FF2" path="Build Targets/Build from Distribution Package" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SAN_APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_RF_Scan_FF2</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Bld_imx25_RF_Base_FF2" path="Build Targets/Build from Distribution Package" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SAN_APP -DBOOTTARGET=mx25evalbd -DAPPTARGET=imx25_RF_Base_FF2</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Clean_imx25_ID_FF3_8100" path="Build Targets/Build from Distribution Package" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SAN_APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_FF3_8100</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Clean_imx25_ID_RF_Scan_FF2" path="Build Targets/Build from Distribution Package" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SAN_APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_RF_Scan_FF2</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Clean_imx25_RF_Base_FF2" path="Build Targets/Build from Distribution Package" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SAN_APP -DBOOTTARGET=mx25evalbd -DAPPTARGET=imx25_RF_Base_FF2</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Bld_Sbx_imx25_ID_FF3_8100" path="Build Targets/Distribution Package Construction" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SANITIZE -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_FF3_8100</buildArguments>
+<buildTarget>SANITIZED_SANDBOX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Bld_Sbx_imx25_ID_RF_Scan_FF2" path="Build Targets/Distribution Package Construction" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SANITIZE -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_RF_Scan_FF2</buildArguments>
+<buildTarget>SANITIZED_SANDBOX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Bld_Sbx_imx25_RF_Base_FF2" path="Build Targets/Distribution Package Construction" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SANITIZE -DBOOTTARGET=mx25evalbd -DAPPTARGET=imx25_RF_Base_FF2</buildArguments>
+<buildTarget>SANITIZED_SANDBOX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Clean_sbx_imx25_ID_FF3_8100" path="Build Targets/Distribution Package Construction" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SANITIZE -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_FF3_8100</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Clean_sbx_imx25_ID_RF_Scan_FF2" path="Build Targets/Distribution Package Construction" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SANITIZE -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_RF_Scan_FF2</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="Clean_sbx_imx25_RF_Base_FF2" path="Build Targets/Distribution Package Construction" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=SANITIZE -DBOOTTARGET=mx25evalbd -DAPPTARGET=imx25_RF_Base_FF2</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="APP_imx25_ID_FF3_8100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_FF3_8100</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_APP_imx25_ID_FF3_8100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_FF3_8100</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="APP_imx25_ID_FF3_8213" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_FF3_8213</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_APP_imx25_ID_FF3_8213" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_build -DAPPTARGET=imx25_ID_FF3_8213</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="APP_imx25_ID_FF3_5100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_ID_FF3_5100</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_APP_imx25_ID_FF3_5100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_ID_FF3_5100</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="APP_imx25_ID_FF3_4100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_ID_FF3_4100</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_APP_imx25_ID_FF3_4100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_ID_FF3_4100</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="APP_imx25_ID_FF3_3100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_ID_FF3_3100</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_APP_imx25_ID_FF3_3100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_ID_FF3_3100</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="APP_imx25_ID_FF3_3110" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_ID_FF3_3110</buildArguments>
+<buildTarget>MATRIX</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="CLEAN_APP_imx25_ID_FF3_3110" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../tools/make</buildCommand>
+<buildArguments>-r -c ../.. -DAPPTYPE=APP -DBOOTTARGET=imx25_5100 -DAPPTARGET=imx25_ID_FF3_3110</buildArguments>
+<buildTarget>CLEANALL</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+<target name="KW_APP_imx25_ID_FF3_8100" path="Build Targets/Corded" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
+<buildCommand>../../Klocwork/KW.bat</buildCommand>
+<buildArguments>imx25_ID_FF3_8100</buildArguments>
+<buildTarget>all</buildTarget>
+<stopOnError>false</stopOnError>
+<useDefaultCommand>false</useDefaultCommand>
+<runAllBuilders>true</runAllBuilders>
+</target>
+</buildTargets>
+</storageModule>
+</cconfiguration>
+</storageModule>
+</cproject>
