@@ -1,0 +1,22 @@
+/*===================================================================
+  This is the Compatible Products Record data for Corded Application
+  Firmware.
+  0:  Boot Firmware
+  1:  Corded Application Firmware
+  
+  Note:  the end of this multiline comment must be on its own
+  line.
+=====================================================================
+   $Source: Gen6FoundationApp/MakeMocf/CordedApp/CompatProdApp_Corded.txt $
+   $Date: 2010/02/24 15:55:38EST $
+   $Revision: 1.1 $
+
+
+===================================================================*/
+0
+1
+
+
+
+
+

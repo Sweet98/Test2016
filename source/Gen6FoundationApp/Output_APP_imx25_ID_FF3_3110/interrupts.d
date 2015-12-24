@@ -1,0 +1,12 @@
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp\libraries\OsKernel\app_kernel\interrupts.cpp
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp\libraries\OsKernel\app_kernel\interrupts.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/HardwareMacros.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/interruptMacros.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/iMX25/iMX25_INTVEC.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/iMX25/iMX25_ASIC.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/Hardware_Width_Defines.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/db_chrio.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/platform.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/compiler.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/iMX25/iMX25_WDOG.h
+Output_APP_imx25_ID_FF3_3110/interrupts.o: D:\Super2D\source\Gen6FoundationApp/libraries/OsKernel/db_shared/Hardware_Header_Files/iMX25/iMX25_GPIO.h

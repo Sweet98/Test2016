@@ -1,0 +1,22 @@
+﻿Firmware版本号格式说明
+=======================================
+
+Firmware版本号共12位，由文件类型(1位)，版本类型(1位)，产品型号(4位)，发布日期(6位)这4部分组成，
+格式如下：
+例如：AA3100150330
+ A A 3 1 0 0 1 5 0 3 3 0
+._._._ _ _ _._ _ _ _ _ _.
+ | | |       |        
+ | | |       |[发布日期] 例如: 150330
+ | | |       
+ | | |[产品型号] 例如: 3100
+ | | 
+ | |[版本类型]
+ | | A: Standard release (标准版本)
+ | | B: Customized release (客户定制)
+ | | T: Internal test release (内部测试)
+ |
+ |[文件类型]
+ | A: Application file
+ | B: Boot file
+ | C: Configuration file

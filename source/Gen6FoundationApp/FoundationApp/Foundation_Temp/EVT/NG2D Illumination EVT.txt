@@ -1,0 +1,28 @@
+ILLUMINATION EVT CHECKLIST
+
+
+Document:		NG2D Illumination EVT.doc
+Version:		1.0
+Status:			Draft
+Creation Date:		March 8, 2010
+Last Updated:		March 8, 2010
+
+1 Introduction
+This EVT checklist is for NPD engineering validation of the Illumination System.
+
+2 Requirement Checklist
+
+Pass	Test to Perform 
+
+0    Verify Illumination and Aimer are on in TRGMOD0
+0    Verify Illumination and Aimer are on in TRGMOD8
+0    In TRGMOD8, pull trigger and verify the illumination is on.
+0    In TRGMOD8, verify the aimer times out and comes back
+0    In TRGMOD8, snap an image with and without the lights. (IMGSNP1L, 0L), verify the lights change modes and comes back
+0    In TRGMOD0, send TSTLON, verify the illumination is on.  This will stay this way until you pull the trigger.
+0    While the lights are on with TSTLON, send TSTAON, verify the illumination is still on.
+0    Send TSTLOF, verify the Aimer is on from the TSTAON.
+
+
+ACS Software Design Document
+IMAGING AND MOBILITY   
